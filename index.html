@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 文字コードの指定 UTF-8を指定します -->
+    <meta charset="UTF-8" />
+    <!-- レスポンシブ表示のための記述 -->
+    <!-- <meta name="viewport" content="width=1280" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- サイトのアイコンを設定 -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- 検索にヒットしないようにするための記述 -->
+    <meta name="robots" content="noindex" />
+    <!-- サイトのタイトルを記述 -->
+    <title>厚木いちご園</title>
+    <!-- サイトの概要を記述 -->
+    <meta
+      name="description"
+      content="厚木いちご園では、愛情を込めて育てられたいちごが、皆様をお待ちしています。当農園で、思い出に残る素敵ないちご狩りをお楽しみください。"
+    />
+    <!-- Google Fontsを読み込みための記述 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <!-- スタイルシートの読み込みのための記述 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css?20240305" />
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <!-- TOPページ以外はarticle -->
+    <meta property="og:title" content="厚木いちご園" />
+    <meta property="og:site_name" content="厚木いちご園" />
+    <meta property="og:url" content="goto_nouen" />
+    <meta property="og:image" content="https://serika-log.pya.jp/atsugi_ichigo/assets/img/fv_bg2.jpg" />
+    <meta
+      property="og:description"
+      content="厚木いちご園では、愛情を込めて育てられたいちごが、皆様をお待ちしています。当農園で、思い出に残る素敵ないちご狩りをお楽しみください。"
+    />
+  </head>
+  <body>
+    <div class="p-loading">
+      <img class="p-loading__logo" src="./assets/img/logo_strawberry.png" alt="いちごのイラスト" />
+    </div>
+
+    <div class="p-fv">
+      <button id="js-drawer-icon" type="button" class="header__icon c-drawer-icon">
+        <span class="c-drawer-icon__bar"></span>
+        <span class="c-drawer-icon__bar"></span>
+        <span class="c-drawer-icon__bar"></span>
+      </button>
+      <div class="p-fv__boxes">
+        <div class="p-fv__boxes-item">
+          <p class="p-fv__boxes-item-text">幸せの赤い宝石、</p>
+        </div>
+        <div class="p-fv__boxes-item slide-in leftAnime">
+          <p class="p-fv__boxes-item-text slide-in_inner leftAnimeInner">心を満たす美味しさ</p>
+        </div>
+      </div>
+    </div>
+    <div class="p-header-wrapper">
+      <header class="p-header">
+        <ul class="p-nav__list p-nav__list--left">
+          <li class="p-nav__list-item"><a href="#about">この農園について</a></li>
+          <li class="p-nav__list-item"><a href="#products">製品一覧</a></li>
+          <li class="p-nav__list-item"><a href="#news">お知らせ</a></li>
+        </ul>
+        <h1 class="p-nav__logo">
+          <img src="./assets/img/logo.png" alt="厚木いちご園" width="276" height="38" />
+        </h1>
+        <ul class="p-nav__list p-nav__list--right">
+          <li class="p-nav__list-item"><a href="#faq">FAQ</a></li>
+          <li class="p-nav__list-item"><a href="#access">アクセス</a></li>
+          <li class="p-nav__list-item"><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </header>
+    </div>
+
+    <!-- ドロワーメニュー -->
+    <div id="js-drawer-content" class="p-drawer p-drawer-content is-active">
+      <div class="p-drawer__logo">
+        <div class="p-drawer__logo-icon">
+          <img src="./assets/img/logo_strawberry.png" alt="いちごのイラスト" />
+        </div>
+        <div class="p-drawer__logo-en">
+          <a href="#"><img src="./assets/img/logo.png" alt="厚木いちご園" /></a>
+        </div>
+      </div>
+      <nav class="p-drawer__nav">
+        <ul class="p-drawer__list">
+          <li class="p-drawer__list-item">
+            <a href="#about" class="p-drawer__link">この農園について</a>
+          </li>
+          <li class="p-drawer__list-item">
+            <a href="#products" class="p-drawer__link">製品一覧</a>
+          </li>
+          <li class="p-drawer__list-item">
+            <a href="#news" class="p-drawer__link">お知らせ</a>
+          </li>
+          <li class="p-drawer__list-item">
+            <a href="#faq" class="p-drawer__link">FAQ</a>
+          </li>
+          <li class="p-drawer__list-item">
+            <a href="#access" class="p-drawer__link">アクセス</a>
+          </li>
+          <li class="p-drawer__list-item">
+            <a href="#contact" class="p-drawer__link">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <section id="about" class="p-about">
+      <div class="p-about__inner">
+        <div class="p-about__contents">
+          <h2 class="p-about__heading">甘くて新鮮、<br class="u-hidden-sm" />贅沢なひととき</h2>
+          <p class="p-about__text">
+            厚木いちご園は、神奈川県厚木市に位置するいちご狩り農園です。<br class="u-hidden-sp" />
+            地域の自然環境を活かし、高品質ないちごを栽培。<br class="u-hidden-sp" />
+            <br />
+            お客様には新鮮で甘いいちごをご提供し、<br class="u-hidden-sp" />
+            楽しいひと時を過ごして頂けるよう努めています。<br class="u-hidden-sp" />
+            園内には最新の設備が整い、<br class="u-hidden-sp" />清潔で快適な環境でいちご狩りを楽しんで頂けます。<br
+              class="u-hidden-sp"
+            />
+            <br />
+            イベントや体験プログラムも定期的に開催しており、<br class="u-hidden-sp" />
+            地域コミュニティの活性化にも貢献しています。<br />
+            <br />
+            また、いちごジャムやいちごジュースなど、<br class="u-hidden-sp" />
+            お土産にもぴったりな商品も販売しています。<br class="u-hidden-sp" />
+            家族や友人と一緒に、自然の恵みに触れながら、<br class="u-hidden-sp" />
+            心温まる時間をお過ごしください。
+          </p>
+          <div class="p-about__img-top">
+            <img src="./assets/img/about_1.jpg" alt="手のひらに乗せた2粒のいちご" />
+          </div>
+          <div class="p-about__img-bottom"><img src="./assets/img/about_2.png" alt="収穫前のいちご" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="p-products u-separate">
+      <div class="p-products__inner">
+        <div class="c-section-heading">
+          <h2 class="p-products__heading c-section-title js-in-view u-fade-in-up">製品一覧</h2>
+        </div>
+
+        <!-- 製品一覧のスライダー -->
+        <div class="p-products__slider">
+          <div class="swiper p-products__swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide p-product__slide">
+                <figure class="p-product-card">
+                  <div class="p-product-card__img">
+                    <img src="./assets/img/product_pack.jpg" alt="様々な種類のいちごを詰め合わせたパック" />
+                  </div>
+                  <figcaption class="p-product-card__contents">
+                    <p class="p-product-card__contents-text">大粒で育ちの良いいちごを詰め合わせた、厳選いちごパック</p>
+                    <p class="p-product-card__contents-price">￥ 1,100（税込）</p>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide p-product__slide">
+                <figure class="p-product-card">
+                  <div class="p-product-card__img">
+                    <img src="./assets/img/product_jam.jpg" alt="瓶に詰めた手作りのいちごジャム" />
+                  </div>
+                  <div class="p-product-card__contents">
+                    <p class="p-product-card__contents-text">素材の甘みを活かした手作りのジャム。200g</p>
+                    <p class="p-product-card__contents-price">￥ 770（税込）</p>
+                  </div>
+                </figure>
+              </div>
+              <div class="swiper-slide p-product__slide">
+                <figure class="p-product-card">
+                  <div class="p-product-card__img">
+                    <img src="./assets/img/product_juice.jpg" alt="いちごのジュース" />
+                  </div>
+                  <div class="p-product-card__contents">
+                    <p class="p-product-card__contents-text">いちご狩りで収穫したいちごをジュースにできます。テイクアウト可</p>
+                    <p class="p-product-card__contents-price">￥550（税込）</p>
+                  </div>
+                </figure>
+              </div>
+              <div class="swiper-slide p-product__slide">
+                <figure class="p-product-card">
+                  <div class="p-product-card__img">
+                    <img src="./assets/img/product_pack.jpg" alt="様々な種類のいちごを詰め合わせたパック" />
+                  </div>
+                  <figcaption class="p-product-card__contents">
+                    <p class="p-product-card__contents-text">大粒で育ちの良いいちごを詰め合わせた、厳選いちごパック</p>
+                    <p class="p-product-card__contents-price">￥ 1,100（税込）</p>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide p-product__slide">
+                <figure class="p-product-card">
+                  <div class="p-product-card__img">
+                    <img src="./assets/img/product_jam.jpg" alt="瓶に詰めた手作りのいちごジャム" />
+                  </div>
+                  <div class="p-product-card__contents">
+                    <p class="p-product-card__contents-text">素材の甘みを活かした手作りのジャム。200g</p>
+                    <p class="p-product-card__contents-price">￥ 770（税込）</p>
+                  </div>
+                </figure>
+              </div>
+              <div class="swiper-slide p-product__slide">
+                <figure class="p-product-card">
+                  <div class="p-product-card__img">
+                    <img src="./assets/img/product_juice.jpg" alt="いちごのジュース" />
+                  </div>
+                  <div class="p-product-card__contents">
+                    <p class="p-product-card__contents-text">いちご狩りで収穫したいちごをジュースにできます。テイクアウト可</p>
+                    <p class="p-product-card__contents-price">￥550（税込）</p>
+                  </div>
+                </figure>
+              </div>
+              <div class="swiper-slide p-product__slide">
+                <figure class="p-product-card">
+                  <div class="p-product-card__img">
+                    <img src="./assets/img/product_pack.jpg" alt="様々な種類のいちごを詰め合わせたパック" />
+                  </div>
+                  <figcaption class="p-product-card__contents">
+                    <p class="p-product-card__contents-text">大粒で育ちの良いいちごを詰め合わせた、厳選いちごパック</p>
+                    <p class="p-product-card__contents-price">￥ 1,100（税込）</p>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide p-product__slide">
+                <figure class="p-product-card">
+                  <div class="p-product-card__img">
+                    <img src="./assets/img/product_jam.jpg" alt="瓶に詰めた手作りのいちごジャム" />
+                  </div>
+                  <div class="p-product-card__contents">
+                    <p class="p-product-card__contents-text">素材の甘みを活かした手作りのジャム。200g</p>
+                    <p class="p-product-card__contents-price">￥ 770（税込）</p>
+                  </div>
+                </figure>
+              </div>
+              <div class="swiper-slide p-product__slide">
+                <figure class="p-product-card">
+                  <div class="p-product-card__img">
+                    <img src="./assets/img/product_juice.jpg" alt="いちごのジュース" />
+                  </div>
+                  <div class="p-product-card__contents">
+                    <p class="p-product-card__contents-text">いちご狩りで収穫したいちごをジュースにできます。テイクアウト可</p>
+                    <p class="p-product-card__contents-price">￥550（税込）</p>
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="p-news u-separate">
+      <div class="p-news__inner l-inner">
+        <div class="c-section-heading">
+          <h2 class="p-products__heading c-section-title js-in-view u-fade-in-up">お知らせ</h2>
+        </div>
+        <div class="p-news__list">
+          <a class="p-news__list-item">
+            <time class="p-news__list-date" datetime="2023-06-12">2024/03/1</time>
+            <h3 class="p-news__list-title">3月いちご狩りのご予約受付を開始しました</h3>
+          </a>
+          <a class="p-news__list-item">
+            <time class="p-news__list-date" datetime="2023-05-14">2024/02/10</time>
+            <h3 class="p-news__list-title">フリーマガジン「厚木タイムズ」に当農園が掲載！</h3>
+          </a>
+          <a class="p-news__list-item">
+            <time class="p-news__list-date" datetime="2023-04-14">2024/01/05</time>
+            <h3 class="p-news__list-title">今年度のいちご狩りスケジュールについて</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="p-faq u-separate">
+      <div class="p-faq__decoration zoomInTrigger">
+        <img src="./assets/img/decoration_strawbery2.png" alt="花が咲いたいちご" />
+      </div>
+
+      <div class="p-faq__inner l-inner">
+        <div class="c-section-heading">
+          <h2 class="p-products__heading c-section-title js-in-view u-fade-in-up">FAQ</h2>
+        </div>
+        <div class="p-faq__boxs">
+          <details class="p-faq__box p-faq-box">
+            <summary class="p-faq-box__head js-accordion js-summary">
+              <span class="p-faq-box__head-icon">Q</span>
+              <span class="p-faq-box__head-text">いちご狩りの予約は必要ですか？</span>
+            </summary>
+            <p class="p-faq-box__a-text js-content">当園ではお電話若しくはお問い合わせフォームでのご予約をお願いしております。</p>
+          </details>
+          <details class="p-faq__box p-faq-box">
+            <summary class="p-faq-box__head js-accordion js-summary">
+              <span class="p-faq-box__head-icon">Q</span>
+              <span class="p-faq-box__head-text">いちご狩りの当日予約はできますか？</span>
+            </summary>
+            <p class="p-faq-box__a-text js-content">
+              はい、可能です。ただし予約可能枠に限りがありますので、前日までのご予約をおすすめしております。
+            </p>
+          </details>
+          <details class="p-faq__box p-faq-box">
+            <summary class="p-faq-box__head js-accordion js-summary">
+              <span class="p-faq-box__head-icon">Q</span>
+              <span class="p-faq-box__head-text">どのような支払い方法がありますか？</span>
+            </summary>
+            <p class="p-faq-box__a-text js-content">
+              商品代引きとクレジットカード決済をご利用頂けます。代引き手数料は、10,800円未満で税込330円・10,800円以上32,400円未満で税込440円・32,400円以上102,400円未満で税込660円です。手数料はお客様のご負担となりますのでご了承ください。クレジットカード決済は、JCB・VISA・master・ダイナース・アメリカンエキスプレスのマークが入っているカードすべてご利用になれます。
+            </p>
+          </details>
+          <details class="p-faq__box p-faq-box">
+            <summary class="p-faq-box__head js-accordion js-summary">
+              <span class="p-faq-box__head-icon">Q</span>
+              <span class="p-faq-box__head-text">練乳は使用できますか？</span>
+            </summary>
+            <p class="p-faq-box__a-text js-content">はい、ご使用頂けます。練乳は無料サービスとさせて頂いております。</p>
+          </details>
+          <details class="p-faq__box p-faq-box">
+            <summary class="p-faq-box__head js-accordion js-summary">
+              <span class="p-faq-box__head-icon">Q</span>
+              <span class="p-faq-box__head-text">海外発送できますか？</span>
+            </summary>
+            <p class="p-faq-box__a-text js-content">
+              現在のところ対応できておりません。海外からのご注文で日本国内への発送は承っております。
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="p-access u-separate">
+      <div class="p-access__decoration fade_trigger1">
+        <img class="element" src="./assets/img/decoration_strawbery3.png" alt="いちごジャムと木製トレーに乗せたいちご" />
+      </div>
+      <div class="p-access__inner l-inner">
+        <div class="c-section-heading">
+          <h2 class="p-products__heading c-section-title js-in-view u-fade-in-up">アクセス</h2>
+        </div>
+        <div class="p-access__contents">
+          <div class="p-access__contents-address">
+            <dl class="p-access-address">
+              <dt class="p-access-address__title">会社名</dt>
+              <dd class="p-access-address__text"><p>厚木いちご園</p></dd>
+              <dt class="p-access-address__title">代表者名</dt>
+              <dd class="p-access-address__text">
+                <p>清水&nbsp;ゆかり</p>
+              </dd>
+              <dt class="p-access-address__title">所在地</dt>
+              <dd class="p-access-address__text">
+                <p>神奈川県厚木市飯山×××××</p>
+              </dd>
+              <dt class="p-access-address__title">TEL</dt>
+              <dd class="p-access-address__text">
+                <a href="tel:123-456-7890">123-456-7890</a>
+              </dd>
+            </dl>
+          </div>
+          <div class="p-access__contents-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.3000247340574!2d139.31413891482597!3d35.472119969701346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019011b05b00985%3A0x4b64fd3a31918045!2z44CSMjQzLTAyMTMg56We5aWI5bed55yM5Y6a5pyo5biC6aOv5bGx!5e0!3m2!1sja!2sjp!4v1709778926122!5m2!1sja!2sjp"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="p-contact">
+      <div class="p-contact__decoration">
+        <img src="./assets/img/decoration_strawbery4.png" alt="バスケットに入った沢山のいちご" />
+      </div>
+      <div class="p-contact__inner l-inner">
+        <div class="c-section-heading">
+          <h2 class="p-contact__heading c-section-title js-in-view u-fade-in-up">お問い合わせ</h2>
+        </div>
+        <p class="p-contact__text">
+          ご購入・販売に関しましては、<br class="u-hidden-sm" />下記よりお気軽にお問い合わせください。
+        </p>
+        <div class="p-contact__box">
+          <form
+            id="form"
+            class="p-contact__form"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdiUXRtmcZKaxphZ5nmnKL7LJnvMbC70_ocI2Rfgqhr1oAgXg/formResponse"
+            target="hidden_iframe"
+            onsubmit="submitted=true;"
+          >
+            <h3 class="p-form-title">お問い合わせメールフォーム</h3>
+            <div class="p-contact__fields">
+              <!-- お問い合わせ種類  -->
+              <div class="p-contact__field">
+                <div class="p-form__field">
+                  <div class="p-form__field-head">
+                    <div class="p-form__field-label">お問い合わせ種類</div>
+                    <span class="p-form__field-tag">必須</span>
+                  </div>
+                  <div class="p-form__field">
+                    <div class="p-form__field-item">
+                      <div class="p-form__field-radios">
+                        <label class="p-form-field__radio p-from-radio">
+                          <input
+                            class="p-from-radio__input"
+                            type="radio"
+                            name="entry.1688985537"
+                            value="弊社製品について"
+                            checked
+                          />
+                          <span class="p-from-radio__text">弊社製品について</span>
+                        </label>
+                        <label class="form-field__radio from-radio">
+                          <input class="p-from-radio__input" type="radio" name="entry.1688985537" value="いちご狩りについて" />
+                          <span class="p-from-radio__text">いちご狩りについて</span>
+                        </label>
+                        <label class="p-form-field__radio p-from-radio">
+                          <input class="p-from-radio__input" type="radio" name="entry.1688985537" value="その他のお問い合わせ" />
+                          <span class="p-from-radio__text">その他のお問い合わせ</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- お名前  -->
+              <div class="p-contact__field">
+                <div class="p-form__field">
+                  <div class="p-form__field-head">
+                    <label for="your-name" class="p-form__field-label">お名前</label>
+                    <span class="p-form__field-tag">必須</span>
+                  </div>
+                  <div class="p-form__field-item">
+                    <input class="p-form-text" type="text" name="entry.79781151" id="your-name" required />
+                  </div>
+                </div>
+              </div>
+              <!-- 郵便番号  -->
+              <div class="p-contact__field">
+                <div class="p-form__field">
+                  <div class="p-form__field-head">
+                    <label for="your-address-number" class="p-form__field-label">郵便番号</label>
+                  </div>
+                  <div class="p-form__field-item">
+                    <input class="p-form-text" type="text" name="entry.873944809" id="your-address-number" />
+                  </div>
+                </div>
+              </div>
+              <!-- ご住所  -->
+              <div class="p-contact__field">
+                <div class="p-form__field">
+                  <div class="p-form__field-head">
+                    <label for="your-address" class="p-form__field-label">ご住所</label>
+                    <span class="p-form__field-tag">必須</span>
+                  </div>
+                  <div class="p-form__field-item">
+                    <input class="p-form-text" type="text" name="entry.937239549" id="your-address" required />
+                  </div>
+                </div>
+              </div>
+              <!-- メールアドレス  -->
+              <div class="p-contact__field">
+                <div class="p-form__field">
+                  <div class="p-form__field-head">
+                    <label for="your-email" class="p-form__field-label">メールアドレス</label>
+                    <span class="p-form__field-tag">必須</span>
+                  </div>
+                  <div class="p-form__field-item">
+                    <input class="p-form-text" type="email" name="entry.573401225" id="your-email" required />
+                  </div>
+                </div>
+              </div>
+              <!-- 電話番号  -->
+              <div class="p-contact__field">
+                <div class="p-form__field">
+                  <div class="p-form__field-head">
+                    <label for="your-tel" class="p-form__field-label">電話番号</label>
+                    <span class="p-form__field-tag">必須</span>
+                  </div>
+                  <div class="p-form__field-item">
+                    <input class="p-form-text" type="text" name="entry.1385363028" id="your-tel" required />
+                  </div>
+                </div>
+              </div>
+
+              <!-- お問い合わせ内容  -->
+              <div class="p-contact__field">
+                <div class="p-form__field">
+                  <div class="p-form__field-head">
+                    <label for="your-message" class="p-form__field-label">お問い合わせ内容</label>
+                    <span class="p-form__field-tag">必須</span>
+                  </div>
+                  <div class="p-form__field-item">
+                    <textarea
+                      class="p-form-textarea"
+                      name="entry.667149531"
+                      id="your-message"
+                      cols="30"
+                      rows="10"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-contact__button">
+              <input type="submit" value="送信する" class="c-button" />
+            </div>
+            <script type="text/javascript">
+              var submitted = false;
+            </script>
+            <iframe
+              name="hidden_iframe"
+              id="hidden_iframe"
+              style="display: none"
+              onload="if(submitted)  {window.location='thanks.html';}"
+            ></iframe>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="l-footer">
+      <div class="l-footer__inner l-inner">
+        <div class="footer__logo">
+          <div class="l-footer__logo-icon">
+            <img src="./assets/img/logo_strawberry.png" alt="いちごのイラスト" />
+          </div>
+          <div class="l-footer__logo-en">
+            <a href="#">
+              <img src="./assets/img/logo.png" alt="厚木いちご園" />
+            </a>
+          </div>
+        </div>
+        <ul class="l-footer__menu">
+          <li class="l-footer__menu-item"><a href="#about">この農園について</a></li>
+          <li class="l-footer__menu-item"><a href="#products">製品一覧</a></li>
+          <li class="l-footer__menu-item"><a href="#news">お知らせ</a></li>
+          <li class="l-footer__menu-item"><a href="#faq">FAQ</a></li>
+          <li class="l-footer__menu-item"><a href="#access">アクセス</a></li>
+          <li class="l-footer__menu-item"><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="l-footer__copyright">
+        <small>&copy;&nbsp;2024&nbsp;ATSUGI&nbsp;STRAWBERRY&nbsp;FARM.</small>
+      </div>
+      <div class="l-footer__decoration-left">
+        <img src="./assets/img/decoration_strawbery.png" alt="手のひらに乗った大粒のいちご" />
+      </div>
+      <div class="l-footer__decoration-right">
+        <img src="./assets/img/decoration_owner.png" alt="農園オーナーの清水ゆかり" />
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
